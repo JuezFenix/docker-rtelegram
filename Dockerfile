@@ -4,6 +4,8 @@ MAINTAINER JuezFenix
 
 # package version
 ARG RTELEGRAM_VER="1.1"
+ENV RT_TOKEN=""  \
+    PARAMS=""
 
 VOLUME /log /rtelegram
 
