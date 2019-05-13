@@ -11,6 +11,5 @@ VOLUME /log /rtelegram
 
 COPY rtelegram /rtelegram
 COPY rtelegram.sh /rtelegram
-RUN chmod +x /rtelegram/rtelegram && chmod +x /rtelegram/rtelegram.sh
 
 ENTRYPOINT ["/rtelegram/rtelegram.sh"]
