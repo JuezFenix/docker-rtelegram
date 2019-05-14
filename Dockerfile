@@ -7,10 +7,11 @@ ARG RTELEGRAM_VER="1.1"
 ENV RT_TOKEN=""  \
     PARAMS=""
 
-VOLUME /log /rtelegram
+VOLUME /log
 
+RUN mkdir /rtelegram
 COPY rtelegram /rtelegram
 COPY rtelegram.sh /rtelegram
-RUN chmod +x /rtelegram/rtelegram && chmod +x /rtelegram/rtelegram.sh
+RUN chmod +x rtelegram*
 
-CMD ["/rtelegram/rtelegram.sh"]
+ENTRYPOINT ["/rtelegram/rtelegram.sh"]
